@@ -13,6 +13,7 @@ public class Exception04 {
 		System.out.println("プログラム終了");
 	}
 	
+//	メソッド内ではなく呼び出し元で例外を処理させるための記述
 	public static void readFile(String fileName) throws FileNotFoundException {
 		System.out.println("ファイルの読み込み開始");
 		FileReader fr = new FileReader(fileName);
