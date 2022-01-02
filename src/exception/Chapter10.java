@@ -21,12 +21,16 @@ public class Chapter10 {
 		} catch (SQLException e) {
 			System.out.println("SQLExceptionが発生しました");
 			e.printStackTrace();
+//			解答では以下の文はfinallyで記述されている。catchに書いていてもいいような。
 			System.out.println("throwSQLExceptionの呼び出し終了");
-		}		
+		}
 		System.out.println("mainメソッド終了");
 	}
 	
 	public static void validIndex(int array[], int i) {
+//		解答では範囲外ならば例外をスローするという記載方法。
+//		そのように記載すればelse文の記載は不要なのでよりスマート。
+//		また、if文の書き方も要素の大きさは2と指定するのではなくarray.lengthで指定をしている。
 		if (i <= 2) {
 			System.out.println("インデックス" + i + "の要素数は" + array[i] + "です");
 		} else {
