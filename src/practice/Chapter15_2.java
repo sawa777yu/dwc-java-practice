@@ -28,7 +28,7 @@ public class Chapter15_2 {
 //		try-with-resourcesという書き方が使えるようになった
 //		tryの後ろに初期化処理を記載することでクローズが不要となる
 		try(BufferedReader br = Files.newBufferedReader(inputPath);
-//				実行してもファイルが出力されない
+//				実行してもファイルが出力されない。出力先のpathを変えてみてもだめ。
 				BufferedWriter bw = Files.newBufferedWriter(outputPath);) {
 			
 //			readLineメソッド
